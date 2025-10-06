@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio MASJID AGUNG MANONJAYA - Tim PA3</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background: linear-gradient(135deg, #0d1b2a, #1b263b, #e0c097);
+      background-attachment: fixed;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Motif arabesque halus */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url('https://www.transparenttextures.com/patterns/gplay.png');
+      opacity: 0.1;
+      z-index: -1;
+    }
+
+    header {
+      background: linear-gradient(145deg, #14213d, #274472);
+      color: #fff;
+      padding: 80px 20px 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    /* Efek cahaya lembut */
+    header::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background: radial-gradient(circle at center, rgba(255,215,0,0.25), transparent 70%);
+      animation: lightmove 8s infinite alternate;
+    }
+
+    @keyframes lightmove {
+      from { transform: translate(0,0); }
+      to { transform: translate(100px,50px); }
+    }
+
+    /* Ornamen lentera di kanan kiri */
+    .ornament {
+      position: absolute;
+      top: 0;
+      width: 80px;
+      opacity: 0.8;
+      animation: float 4s ease-in-out infinite alternate;
+    }
+    .ornament.left {
+      left: 40px;
+    }
+    .ornament.right {
+      right: 40px;
+      animation-delay: 2s;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(15px); }
+    }
+
+    h1 {
+      font-size: 2.5em;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    section {
+      padding: 50px 25px;
+      max-width: 1000px;
+      margin: 50px auto;
+      background: rgba(255,255,255,0.85);
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Motif border arabesque */
+    section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+      opacity: 0.08;
+    }
+
+    h2 {
+      text-align: center;
+      color: #14213d;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+    }
+
+    .intro {
+      text-align: center;
+    }
+
+    .intro img {
+      width: 260px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .video-container {
+      text-align: center;
+    }
+
+    .video-container video {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+
+    footer {
+      text-align: center;
+      background: linear-gradient(145deg, #14213d, #274472);
+      color: #fff;
+      padding: 30px;
+      margin-top: 60px;
+      position: relative;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+    }
+
+    footer p {
+      margin: 0;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Ornamen lentera -->
+    <img src="https://cdn-icons-png.flaticon.com/512/3176/3176289.png" class="ornament left" alt="Lamp Left">
+    <img src="https://cdn-icons-png.flaticon.com/512/3176/3176292.png" class="ornament right" alt="Lamp Right">
+
+    <h1>Portofolio Tim PA 3</h1>
+    <p>Mengangkat tema Masjid Agung Manonjaya</p>
+    <nav>
+      <a href="#beranda">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#proyek">Proyek</a>
+      <a href="#video">Video</a>
+      <a href="#kontak">Kontak</a>
+      <a href="#penutupan">Penutupan</a>
+    </nav>
+  </header>
+
+  <section id="beranda" class="intro">
+    <img src="gambar 1.JPG" alt="Foto Masjid Budaya">
+    <p>Selamat datang di portofolio Tim PA3! Kami mengangkat Masjid Agung Manonjaya sebagai tema utama dari portofolio ini.</p>
+  </section>
+
+  <section id="tentang">
+    <h2>Tentang Kami</h2>
+    <p><strong>Kami adalah Tim Aditya yang berfokus pada kebudayaan Masjid Agung Manonjaya.</strong></p>
+  </section>
+
+  <section id="proyek">
+    <h2>Proyek</h2>
+    <div class="projects">
+      <div class="card">
+        <img src="Masjid agung.jpg" alt="Masjid Proyek">
+        <h3>Lokasi</h3>
+        <p>Masjid Agung Manonjaya berlokasi di Kecamatan Manonjaya, Kabupaten Tasikmalaya...</p>
+      </div>
+      <div class="card">
+        <img src="msjd.jpeg" alt="Sejarah">
+        <h3>Sejarah</h3>
+        <p>🕌 Didirikan tahun 1832 oleh Raden Tumenggung Wiradadaha VIII (Bupati Sukapura)...</p>
+      </div>
+      <div class="card">
+        <img src="Masjidddddddddddddddddddd.webp" alt="Tradisi">
+        <h3>Tradisi</h3>
+        <p>Masjid Agung Manonjaya menjadi pusat kegiatan sosial, keagamaan, dan kebudayaan masyarakat...</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="video">
+    <h2>Dokumentasi Video</h2>
+    <div class="video-container">
+      <video controls>
+        <source src="Drone masjid Agung Manonjaya Tasikmalaya  free footage mp4.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video ini.
+      </video>
+      <p>Video dokumentasi Masjid Agung Manonjaya.</p>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak</h2>
+    <p>Jika tertarik untuk bekerja sama, hubungi kami di: <strong>081225578498</strong></p>
+  </section>
+
+  <section id="penutupan">
+    <h2>Penutupan</h2>
+    <p>Terima kasih telah mengunjungi portofolio Tim PA3. Semoga karya kami menginspirasi dan memperkuat kecintaan terhadap warisan budaya Islam di Indonesia.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tim PA3 - Portofolio Masjid Agung Manonjaya</p>
+  </footer>
+</body>
+</html>
